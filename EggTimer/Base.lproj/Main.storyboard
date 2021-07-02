@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="flY-qD-s12">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--BOIL-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EggTimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mmt-rH-S36">
+                                <rect key="frame" x="132" y="620.5" width="150" height="150"/>
+                                <state key="normal" title="Hard" image="GudetamaFlat"/>
+                                <connections>
+                                    <segue destination="aAK-Kn-lwU" kind="show" identifier="HardToTimer" id="hbu-Xe-T6l"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TFv-Wz-Y5P">
+                                <rect key="frame" x="132" y="373" width="150" height="150"/>
+                                <state key="normal" title="Medium" image="GudetamaSitting"/>
+                                <connections>
+                                    <segue destination="aAK-Kn-lwU" kind="show" identifier="MediumToTimer" id="gL4-0O-TIy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K1b-bn-VvS">
+                                <rect key="frame" x="132" y="123" width="150" height="150"/>
+                                <state key="normal" title="Soft" image="GudetamaBored"/>
+                                <connections>
+                                    <segue destination="aAK-Kn-lwU" kind="show" identifier="SoftToTimer" id="Rpp-ki-McD"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SOFT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vw3-SC-GnM">
+                                <rect key="frame" x="190.5" y="283.5" width="33" height="19"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                <color key="textColor" red="0.98039215690000003" green="0.50980392159999999" blue="0.19215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MEDIUM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uCd-hS-OmK">
+                                <rect key="frame" x="176" y="531" width="62" height="18"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                <color key="textColor" red="0.98039215690000003" green="0.50980392159999999" blue="0.19215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HARD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ubk-jU-h8K">
+                                <rect key="frame" x="188" y="778.5" width="38" height="18.5"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                <color key="textColor" red="0.98039215690000003" green="0.50980392159999999" blue="0.19215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.96848052740000001" green="0.93953340870000002" blue="0.80084401250000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ubk-jU-h8K" secondAttribute="bottom" constant="65" id="6sl-0v-2af"/>
+                            <constraint firstItem="Mmt-rH-S36" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.167411" id="7jC-OV-ugR"/>
+                            <constraint firstItem="Vw3-SC-GnM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DGD-iL-wk7"/>
+                            <constraint firstItem="Mmt-rH-S36" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="75:448" id="IS1-u8-nET"/>
+                            <constraint firstItem="Mmt-rH-S36" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LsI-QL-HU1"/>
+                            <constraint firstItem="Vw3-SC-GnM" firstAttribute="top" secondItem="K1b-bn-VvS" secondAttribute="bottom" constant="10.5" id="RsR-0S-U0a"/>
+                            <constraint firstItem="TFv-Wz-Y5P" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="75:448" id="S3T-QP-a5l"/>
+                            <constraint firstItem="TFv-Wz-Y5P" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VJW-gm-SzX"/>
+                            <constraint firstItem="uCd-hS-OmK" firstAttribute="top" secondItem="TFv-Wz-Y5P" secondAttribute="bottom" constant="8" symbolic="YES" id="fgp-3y-6ml"/>
+                            <constraint firstItem="K1b-bn-VvS" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="75:448" id="gmu-iQ-B6F"/>
+                            <constraint firstItem="TFv-Wz-Y5P" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.167411" id="h2b-Q0-m5f"/>
+                            <constraint firstItem="Ubk-jU-h8K" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hHq-hT-T14"/>
+                            <constraint firstItem="TFv-Wz-Y5P" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="jWk-eb-8O7"/>
+                            <constraint firstItem="Ubk-jU-h8K" firstAttribute="top" secondItem="Mmt-rH-S36" secondAttribute="bottom" constant="8" symbolic="YES" id="mmF-T3-1er"/>
+                            <constraint firstItem="K1b-bn-VvS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="q7c-oT-1c2"/>
+                            <constraint firstItem="K1b-bn-VvS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="tQL-1T-SrI"/>
+                            <constraint firstItem="K1b-bn-VvS" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.167411" id="wlV-Hu-5as"/>
+                            <constraint firstItem="uCd-hS-OmK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zgN-Ya-MMs"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="BOIL" id="pqS-et-Puh"/>
+                    <connections>
+                        <outlet property="hardButton" destination="Mmt-rH-S36" id="P5g-lo-Gzr"/>
+                        <outlet property="mediumButton" destination="TFv-Wz-Y5P" id="ypW-Hg-1PG"/>
+                        <outlet property="softButton" destination="K1b-bn-VvS" id="DV2-wU-xUV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="944.92753623188412" y="93.75"/>
+        </scene>
+        <!--Timer View Controller-->
+        <scene sceneID="jZA-y0-k6t">
+            <objects>
+                <viewController id="aAK-Kn-lwU" customClass="TimerViewController" customModule="EggTimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CKo-Cg-CIX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ds-my-cvW">
+                                <rect key="frame" x="0.0" y="292" width="207" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="START"/>
+                                <connections>
+                                    <action selector="startStopTapped:" destination="aAK-Kn-lwU" eventType="touchUpInside" id="zCJ-cs-Xeq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DTH-Og-lBa">
+                                <rect key="frame" x="207" y="292" width="207" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="RESET"/>
+                                <connections>
+                                    <action selector="resetTapped:" destination="aAK-Kn-lwU" eventType="touchUpInside" id="o6T-C7-YEF"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00 : 00 : 00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="35" translatesAutoresizingMaskIntoConstraints="NO" id="Mfg-4v-eOv">
+                                <rect key="frame" x="35" y="148" width="344" height="84"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                <color key="textColor" red="0.98039215690000003" green="0.50980392159999999" blue="0.19215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gudetamaLaying" translatesAutoresizingMaskIntoConstraints="NO" id="XT9-ad-NBy">
+                                <rect key="frame" x="9" y="696" width="396" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="vnT-z8-lTE"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Wi5-me-gsd"/>
+                        <color key="backgroundColor" red="0.96848052740000001" green="0.93953340870000002" blue="0.80084401250000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Wi5-me-gsd" firstAttribute="trailing" secondItem="XT9-ad-NBy" secondAttribute="trailing" constant="9" id="9DV-kd-xY2"/>
+                            <constraint firstItem="DTH-Og-lBa" firstAttribute="top" secondItem="Mfg-4v-eOv" secondAttribute="bottom" constant="60" id="AwX-Gr-pft"/>
+                            <constraint firstItem="XT9-ad-NBy" firstAttribute="leading" secondItem="Wi5-me-gsd" secondAttribute="leading" constant="9" id="K5r-iF-PjM"/>
+                            <constraint firstItem="1ds-my-cvW" firstAttribute="centerY" secondItem="DTH-Og-lBa" secondAttribute="centerY" id="OIx-er-lkA"/>
+                            <constraint firstItem="DTH-Og-lBa" firstAttribute="leading" secondItem="1ds-my-cvW" secondAttribute="trailing" id="SMC-iG-0hO"/>
+                            <constraint firstItem="Mfg-4v-eOv" firstAttribute="leading" secondItem="Wi5-me-gsd" secondAttribute="leading" constant="35" id="T7q-Ix-UWy"/>
+                            <constraint firstItem="Wi5-me-gsd" firstAttribute="trailing" secondItem="DTH-Og-lBa" secondAttribute="trailing" id="VJA-gk-66L"/>
+                            <constraint firstItem="DTH-Og-lBa" firstAttribute="width" secondItem="1ds-my-cvW" secondAttribute="width" id="niD-bc-10Q"/>
+                            <constraint firstItem="Mfg-4v-eOv" firstAttribute="top" secondItem="Wi5-me-gsd" secondAttribute="top" constant="60" id="oiO-fb-zIv"/>
+                            <constraint firstItem="1ds-my-cvW" firstAttribute="leading" secondItem="Wi5-me-gsd" secondAttribute="leading" id="ppk-mI-vhU"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="XT9-ad-NBy" secondAttribute="bottom" constant="-34" id="rvy-AI-mGa"/>
+                            <constraint firstItem="Mfg-4v-eOv" firstAttribute="centerX" secondItem="CKo-Cg-CIX" secondAttribute="centerX" id="xUH-R2-ug5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="sSw-l1-ZjN"/>
+                    <connections>
+                        <outlet property="resetButton" destination="DTH-Og-lBa" id="oaj-FS-0n0"/>
+                        <outlet property="startStopButton" destination="1ds-my-cvW" id="95n-G0-Nqe"/>
+                        <outlet property="timerLabel" destination="Mfg-4v-eOv" id="diU-Ee-c1z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UkD-9O-hhc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1668.1159420289857" y="93.75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="G0S-1w-rTS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="flY-qD-s12" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rVW-Mr-X6I">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="1e5-EX-xzE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nCq-Yc-MB0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="93.75"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="hbu-Xe-T6l"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="GudetamaBored" width="860" height="614"/>
+        <image name="GudetamaFlat" width="1885" height="2940"/>
+        <image name="GudetamaSitting" width="1280" height="720"/>
+        <image name="gudetamaLaying" width="865" height="384"/>
+    </resources>
+</document>

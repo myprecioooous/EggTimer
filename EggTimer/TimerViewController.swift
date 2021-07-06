@@ -129,8 +129,10 @@ class TimerViewController: UIViewController {
                 calcSec = 0
                 calcMinutes = 4
                 timer.invalidate()
-                //calcSec = 0
-                //timerLabel.text = makeTimeString(0, 4, 0)
+                
+                let interval = 1.0
+                NotificationService.sharedInstance.requestTimerNotification(repeatedly: false, withinterval: interval)
+                
                 timerCounting = false
                 startStopButton.setTitle("START", for: .normal)
                 startStopButton.setTitleColor(UIColor.green, for: .normal)
@@ -146,8 +148,10 @@ class TimerViewController: UIViewController {
                 calcSec = 0
                 calcMinutes = 8
                 timer.invalidate()
-                //calcSec = 0
-                //timerLabel.text = makeTimeString(0, 4, 0)
+                
+                let interval = 1.0
+                NotificationService.sharedInstance.requestTimerNotification(repeatedly: false, withinterval: interval)
+                
                 timerCounting = false
                 startStopButton.setTitle("START", for: .normal)
                 startStopButton.setTitleColor(UIColor.green, for: .normal)
@@ -163,8 +167,10 @@ class TimerViewController: UIViewController {
                 calcSec = 0
                 calcMinutes = 11
                 timer.invalidate()
-                //calcSec = 0
-                //timerLabel.text = makeTimeString(0, 4, 0)
+                
+                let interval = 1.0
+                NotificationService.sharedInstance.requestTimerNotification(repeatedly: false, withinterval: interval)
+                
                 timerCounting = false
                 startStopButton.setTitle("START", for: .normal)
                 startStopButton.setTitleColor(UIColor.green, for: .normal)

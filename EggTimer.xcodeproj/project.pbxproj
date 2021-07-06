@@ -14,6 +14,8 @@
 		51382B5D25E5F3380027A53E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51382B5C25E5F3380027A53E /* Assets.xcassets */; };
 		51382B6025E5F3380027A53E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51382B5E25E5F3380027A53E /* LaunchScreen.storyboard */; };
 		51382B6925E5F52E0027A53E /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51382B6825E5F52E0027A53E /* TimerViewController.swift */; };
+		51A47EC82693FED500633EBA /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A47EC72693FED500633EBA /* NotificationService.swift */; };
+		51A47ECB2693FEF000633EBA /* funnysong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 51A47ECA2693FEF000633EBA /* funnysong.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		51382B5F25E5F3380027A53E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		51382B6125E5F3380027A53E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51382B6825E5F52E0027A53E /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		51A47EC72693FED500633EBA /* NotificationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		51A47ECA2693FEF000633EBA /* funnysong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = funnysong.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,11 +67,29 @@
 				51382B5725E5F3370027A53E /* ViewController.swift */,
 				51382B6825E5F52E0027A53E /* TimerViewController.swift */,
 				51382B5925E5F3370027A53E /* Main.storyboard */,
+				51A47EC62693FED500633EBA /* Services */,
+				51A47EC92693FEF000633EBA /* Sounds */,
 				51382B5C25E5F3380027A53E /* Assets.xcassets */,
 				51382B5E25E5F3380027A53E /* LaunchScreen.storyboard */,
 				51382B6125E5F3380027A53E /* Info.plist */,
 			);
 			path = EggTimer;
+			sourceTree = "<group>";
+		};
+		51A47EC62693FED500633EBA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				51A47EC72693FED500633EBA /* NotificationService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		51A47EC92693FEF000633EBA /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				51A47ECA2693FEF000633EBA /* funnysong.mp3 */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,6 +151,7 @@
 			files = (
 				51382B6025E5F3380027A53E /* LaunchScreen.storyboard in Resources */,
 				51382B5D25E5F3380027A53E /* Assets.xcassets in Resources */,
+				51A47ECB2693FEF000633EBA /* funnysong.mp3 in Resources */,
 				51382B5B25E5F3370027A53E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,6 +166,7 @@
 				51382B6925E5F52E0027A53E /* TimerViewController.swift in Sources */,
 				51382B5825E5F3370027A53E /* ViewController.swift in Sources */,
 				51382B5425E5F3370027A53E /* AppDelegate.swift in Sources */,
+				51A47EC82693FED500633EBA /* NotificationService.swift in Sources */,
 				51382B5625E5F3370027A53E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

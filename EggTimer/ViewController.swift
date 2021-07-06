@@ -33,6 +33,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Invoking the authorizeNotification method in NotificationService class
+        NotificationService.sharedInstance.authorizeNotification()
+        
         let appearance = UINavigationBarAppearance()
         appearance.titleTextAttributes = [.foregroundColor: UIColor.orange, .font:  UIFont(name: "Marker Felt Thin", size: 30)!]
         appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.orange]

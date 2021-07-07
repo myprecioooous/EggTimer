@@ -76,7 +76,6 @@ class TimerViewController: UIViewController {
             //reset
             self.count = 0
             self.timer.invalidate()
-            //self.timerLabel.text = self.makeTimeString(0, 4, 0)
             
             let buttonClicked = self.previousButtonClicked!
             if buttonClicked == "Soft" {
@@ -108,6 +107,17 @@ class TimerViewController: UIViewController {
         timerLabel.text = timeString
     }
     
+    func timesUp() {
+        timer.invalidate()
+
+        let interval = 1.0
+        NotificationService.sharedInstance.requestTimerNotification(repeatedly: false, withinterval: interval)
+
+        timerCounting = false
+        startStopButton.setTitle("START", for: .normal)
+        startStopButton.setTitleColor(UIColor.green, for: .normal)
+    }
+    
     func  secondsToHoursMinutesSeconds(_ seconds: Int) -> (Int, Int, Int) {
         let hours = seconds / 3600
         let minutes = (seconds % 3600) / 60
@@ -116,10 +126,7 @@ class TimerViewController: UIViewController {
         var calcMinutes = 0
         var calcSec = 0
         
-//        calcMinutes = 3 - minutes
         calcSec = 60 - sec
-        
-        
         
         let buttonClicked =  previousButtonClicked!
         if buttonClicked == "Soft" {
@@ -128,14 +135,8 @@ class TimerViewController: UIViewController {
                 count = 0
                 calcSec = 0
                 calcMinutes = 4
-                timer.invalidate()
                 
-                let interval = 1.0
-                NotificationService.sharedInstance.requestTimerNotification(repeatedly: false, withinterval: interval)
-                
-                timerCounting = false
-                startStopButton.setTitle("START", for: .normal)
-                startStopButton.setTitleColor(UIColor.green, for: .normal)
+                timesUp()
                 
             }
                     
@@ -147,14 +148,8 @@ class TimerViewController: UIViewController {
                 count = 0
                 calcSec = 0
                 calcMinutes = 8
-                timer.invalidate()
                 
-                let interval = 1.0
-                NotificationService.sharedInstance.requestTimerNotification(repeatedly: false, withinterval: interval)
-                
-                timerCounting = false
-                startStopButton.setTitle("START", for: .normal)
-                startStopButton.setTitleColor(UIColor.green, for: .normal)
+                timesUp()
                 
             }
             
@@ -165,22 +160,13 @@ class TimerViewController: UIViewController {
             if calcMinutes == 0 {
                 count = 0
                 calcSec = 0
-                calcMinutes = 11
-                timer.invalidate()
+                calcMinutes = 12
                 
-                let interval = 1.0
-                NotificationService.sharedInstance.requestTimerNotification(repeatedly: false, withinterval: interval)
-                
-                timerCounting = false
-                startStopButton.setTitle("START", for: .normal)
-                startStopButton.setTitleColor(UIColor.green, for: .normal)
+                timesUp()
                 
             }
             
         }
-        
-        
-        //let calcSec = 60 - sec
         
         return (hours, calcMinutes, calcSec)
     }
@@ -196,10 +182,6 @@ class TimerViewController: UIViewController {
         
         return timeString
     }
-    
-    
-
-    
-    
+  
     
 }
